@@ -8,6 +8,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Open index.html",
+            "url": "http://localhost:5500",
             "file": "/Users/theebaddest/Desktop/WDev101/index.html"
         }
     ]

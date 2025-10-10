@@ -193,6 +193,12 @@ button:hover {
 }
 
 /*** RSVP Section ***/
+.error{ 
+  border-style:solid; 
+  border-width: 2px; 
+  border-color: red;
+  background-color: pink;
+}
 .rsvp-container { 
   text-align: center;
   padding: 20px 0 0 0;

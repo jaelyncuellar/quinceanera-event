@@ -1,44 +1,33 @@
 /*** Light Mode ***/
 
-// 1. Select the theme button
 let themeButton = document.getElementById("theme-button");
-// 2. Write the callback function
+// callback function
 const toggleLightMode = () => {
     document.documentElement.classList.toggle("light-mode");
     document.body.classList.toggle("light-mode");
     console.log('class changed');
 }
-// 3. Register a 'click' event listener for the theme button,
-// & tell it to use toggleLightMode as its callback function
+// 'click' event listener for the theme button,
+// use toggleLightMode as its callback function
 themeButton.addEventListener("click", toggleLightMode);
-
-
 
 /*** Form Handling ***
   - When user submits RSVP form, the name and state they 
     entered should be added to the list of participants.
 ***/
-
-// 1. Add query for submit RSVP button
+// add query for submit RSVP button
 let rsvpButton = document.getElementById("rsvp-button")
 let count = 3; 
 const addParticipant = (event) => {
-    // 2. write code to manipulate DOM
+    // manipulate DOM
     let firstName = document.getElementById('fname').value;
     let lastName = document.getElementById('lname').value;
     let email = document.getElementById('email').value;
-
-    // use DOM method to create new <p> ele 
-    const p = document.createElement('p'); 
-    // set new <p> ele text to be the user's name & other details got 
-    p.textContent=`🎟️ ${firstName} ${lastName} has RSVP'd.`;
-    // use DOM to find the rsvp-participants div and add new <p> ele to it 
-    const participantsDiv = document.querySelector('.rsvp-participants');
-    //append the new <p> to the div 
-    participantsDiv.appendChild(p);
-
-    // use DOM method to find the rsvp-count ele 
-    // then remove it and update it 
+    const p = document.createElement('p'); // use DOM method to create new <p>
+    p.textContent=`🎟️ ${firstName} ${lastName} has RSVP'd.`; // set <p> to user's input  
+    const participantsDiv = document.querySelector('.rsvp-participants'); // use DOM to find the rsvp-participants div and add new <p> ele to it 
+    participantsDiv.appendChild(p);  //append the new <p> to the div
+    // use DOM method to find the rsvp-count ele. then remove it and update it 
     const rsvpCount = document.getElementById('rsvp-count'); 
     rsvpCount.remove(); 
     count = count + 1; 
@@ -46,23 +35,49 @@ const addParticipant = (event) => {
     increaseCount.id = 'rsvp-count'; 
     increaseCount.textContent="⭐" + count + " people have RSVP'd to this event!"; 
     participantsDiv.appendChild(increaseCount); 
-
-
-
-    
-
-
-
-
-
+    print(participantsDiv)
     event.preventDefault();
 }
+// click event listener to the submit RSVP button
+// rsvpButton.addEventListener("click", addParticipant);
 
-// 3. Add a click event listener to the submit RSVP button
-rsvpButton.addEventListener("click", addParticipant);
+/*** Form Validation 
+ * purpose: prevents invalid form submissions from being added 
+ * to the list of participants 
+ * ***/
+// call back fn 
+const validateForm = (event) => { 
+    let containsErrors = false; 
+    var rsvpElements = document.getElementById('rsvp-form').elements; 
+    // loop thru all inputs - fname, lname, email
+    for (let i = 0; i < rsvpElements.length; i++){ 
+        // validate the val of each input 
+        let element = rsvpElements[i]; // input#id, .value = user input 
+        if (element.value.length < 2){ // add an error class attribute to curr input 
+            containsErrors=true;
+            element.classList.add('error');
+        }
+        else { 
+            element.classList.remove('error'); 
+        }
+    }
+    let email = document.getElementById('email'); 
+    if (!email.value.includes(".com")){ 
+        console.log("email not valid!"); 
+        containsErrors=true;
+        email.classList.add('error');
+    }
+    // if no errors - call addParticipant() and clear fields 
+    if (!containsErrors){ // true 
+        addParticipant(event) 
+        for (let i = 0; i < rsvpElements.length; i++){ 
+            rsvpElements[i].value = "";
+        }
+    }
+}
 
+// replace the form button's event listener with a new one that calls validateForm() 
+rsvpButton.addEventListener("click", validateForm);
 
-
-/*** Form Validation [PLACEHOLDER] [ADDED IN UNIT 7] ***/
 /*** Animations [PLACEHOLDER] [ADDED IN UNIT 8] ***/
 /*** Success Modal [PLACEHOLDER] [ADDED IN UNIT 9] ***/
