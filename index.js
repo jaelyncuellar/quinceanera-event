@@ -38,7 +38,6 @@ const addParticipant = (event, person) => {
 // click event listener to the submit RSVP button
 rsvpButton.addEventListener("click", addParticipant);
 
-
 /*** Form Validation ***/
 const validateForm = (event) => { 
     event.preventDefault();
@@ -61,7 +60,6 @@ const validateForm = (event) => {
             element.classList.remove('error'); 
         }
     }
-    // let email = document.getElementById('email'); 
     if (!person.email.includes(".com")){ 
         console.log("email not valid!"); 
         containsErrors=true;
@@ -87,10 +85,20 @@ const toggleModal = (person) => {
     let modalContent = document.getElementById('modal-item');
 
     modal.style.display='flex';
-    modalContent.innerText = `Thanks for RSVPing, ${person.firstName}! We are looking forward to seeing you at the event!`;
+    modalContent.innerText = `Thanks for RSVPing, ${person.name}! We are looking forward to seeing you at the event!`;
 
-    // Set modal timeout to 5 seconds
+    let intervalId = setInterval(animateImage, 500); 
+
+    setTimeout(()=>{
+        modal.style.display='none';
+        clearInterval(intervalId); 
+    }, 5000); 
+
 }
 // TODO: animation variables and animateImage() function
-
-
+let rotateFactor = 0; 
+let modalImage = document.getElementById('modal-image');
+const animateImage = () => {
+    rotateFactor = rotateFactor===0 ? -10 : 0;
+    modalImage.style.transform = `rotate(${rotateFactor}deg)`; 
+}
