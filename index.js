@@ -39,8 +39,7 @@ const addParticipant = (event, person) => {
 rsvpButton.addEventListener("click", addParticipant);
 
 
-/*** Form Validation 
- * call back fn ***/ 
+/*** Form Validation ***/
 const validateForm = (event) => { 
     event.preventDefault();
     let containsErrors = false; 
@@ -75,6 +74,23 @@ const validateForm = (event) => {
             rsvpElements[i].value = "";
         }
     }
+    toggleModal(person);
 }
 // replace the form button's event listener with a new one that calls validateForm() 
 rsvpButton.addEventListener("click", validateForm);
+
+
+/*** Success Modal ***
+  Purpose: pop-up modal ***/
+const toggleModal = (person) => {
+    let modal = document.getElementById('success-modal');
+    let modalContent = document.getElementById('modal-item');
+
+    modal.style.display='flex';
+    modalContent.innerText = `Thanks for RSVPing, ${person.firstName}! We are looking forward to seeing you at the event!`;
+
+    // Set modal timeout to 5 seconds
+}
+// TODO: animation variables and animateImage() function
+
+
