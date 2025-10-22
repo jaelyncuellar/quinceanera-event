@@ -12,13 +12,11 @@ const toggleLightMode = () => {
 themeButton.addEventListener("click", toggleLightMode);
 
 /*** Form Handling ***
-  - When user submits RSVP form, the name and state they 
-    entered should be added to the list of participants.
+user submits RSVP form - name & state added to list of parts
 ***/
-// add query for submit RSVP button
 let rsvpButton = document.getElementById("rsvp-button")
 let count = 3; 
-const addParticipant = (event) => {
+const addParticipant = (event, person) => {
     // manipulate DOM
     let firstName = document.getElementById('fname').value;
     let lastName = document.getElementById('lname').value;
@@ -35,20 +33,24 @@ const addParticipant = (event) => {
     increaseCount.id = 'rsvp-count'; 
     increaseCount.textContent="⭐" + count + " people have RSVP'd to this event!"; 
     participantsDiv.appendChild(increaseCount); 
-    print(participantsDiv)
-    event.preventDefault();
+    // event.preventDefault();
 }
 // click event listener to the submit RSVP button
-// rsvpButton.addEventListener("click", addParticipant);
+rsvpButton.addEventListener("click", addParticipant);
+
 
 /*** Form Validation 
- * purpose: prevents invalid form submissions from being added 
- * to the list of participants 
- * ***/
-// call back fn 
+ * call back fn ***/ 
 const validateForm = (event) => { 
+    event.preventDefault();
     let containsErrors = false; 
     var rsvpElements = document.getElementById('rsvp-form').elements; 
+    // person object
+    let person = { 
+        name: rsvpElements[0].value,
+        hometown: rsvpElements[1].value,
+        email: rsvpElements[2].value 
+    };
     // loop thru all inputs - fname, lname, email
     for (let i = 0; i < rsvpElements.length; i++){ 
         // validate the val of each input 
@@ -56,28 +58,23 @@ const validateForm = (event) => {
         if (element.value.length < 2){ // add an error class attribute to curr input 
             containsErrors=true;
             element.classList.add('error');
-        }
-        else { 
+        } else { 
             element.classList.remove('error'); 
         }
     }
-    let email = document.getElementById('email'); 
-    if (!email.value.includes(".com")){ 
+    // let email = document.getElementById('email'); 
+    if (!person.email.includes(".com")){ 
         console.log("email not valid!"); 
         containsErrors=true;
-        email.classList.add('error');
+        document.getElementById('email').classList.add('error');
     }
     // if no errors - call addParticipant() and clear fields 
     if (!containsErrors){ // true 
-        addParticipant(event) 
+        addParticipant(person);
         for (let i = 0; i < rsvpElements.length; i++){ 
             rsvpElements[i].value = "";
         }
     }
 }
-
 // replace the form button's event listener with a new one that calls validateForm() 
 rsvpButton.addEventListener("click", validateForm);
-
-/*** Animations [PLACEHOLDER] [ADDED IN UNIT 8] ***/
-/*** Success Modal [PLACEHOLDER] [ADDED IN UNIT 9] ***/

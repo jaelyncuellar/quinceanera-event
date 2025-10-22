@@ -1,20 +1,14 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 
     <!-- head
-    Purpose:
     - Title used here shows up in the browser tab
     - Link to the favicon (small image that appears in the browser tab)
     - Link to the CSS file (used to style the webpage)
     -->
     <head>
+        <meta charset="UTF-8">
         <link rel="stylesheet" href="styles.css">
-        <!-- headings
-        - Main header section of the webpage
-        - Contains title, subtitle, img, & key buttons for page
-        -->
         <title>Aaliyah's Quinceanera</title> <!--shows up in browser tab-->  
         <div class="header-container"> 
             <div id ="header-img">
@@ -96,24 +90,34 @@
                     <p>🎟️ Antonia has RSVP'd.</p>
                 </div>
             </div>
-            <!--- Sign RSVP Form --->
             <div class="form-container">
                 <form id="rsvp-form" title="rsvp-form">
-                    <!-- form inputs -->
-                     <label for="fname">First name</label><br> 
-                        <input type="text" id="fname" name="fname"><br>
-                     <label for="lname">Last name</label><br> 
-                        <input type="text" id="lname" name="lname"><br>
-                     <label for="email">Email</label><br> 
-                        <input type="text" id="email" name="email"><br>
-<!---TODO: edit the style of these input fields - add spacing, ---> 
+                    <label for="fname">First name</label><br> 
+                    <input type="text" id="fname" placeholder="First Name" required><br>
+                    <label for="lname">Last name</label><br> 
+                    <input type="text" id="lname" placeholder="Last Name" required><br>
+                    <label for="email">Email</label><br> 
+                    <input type="text" id="email" placeholder="Email" required><br>
                 </form>
-                <!-- Submit button -->
                 <button id="rsvp-button">Submit RSVP</button>
             </div>      
         </div>
          
-        <!-- success modal [PLACEHOLDER] [ADDED IN UNIT 9] --> 
+<!-- success modal
+- Modal that appears when a user successfully signs up for the event
+- Contains a personalized message and image
+--> 
+<div id="success-modal" class="modal">
+    <div class="modal-container">
+        <div id="modal-item">
+            <p>Modal Pop-up Placeholder</p>
+        </div>
+        <div id="modal-item">
+            <!-- Image element here -->
+        </div>
+    </div>
+</div>
+
         <!-- links --> 
         <h2 id="links">Links</h2>
         <!-- This <a> block is one link -->
@@ -143,7 +147,6 @@
                 <p>Curious about what to expect?</p>
             </article>
         </a>
-
          <script src="index.js"></script>
     </body>
 </html>
