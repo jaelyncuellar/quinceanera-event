@@ -4,9 +4,9 @@ This project is a fully responsive, interactive event webpage created for a quin
 ## Table of Contents
 
 1. [Key Features](#✨Key-Features)
-2. [Product Spec](#💡Project-Overview)
-3. [Wireframes](#🛠️Technologies-Used)
-4. [Schema](#Personal-Comment)
+2. [Project Overview](#💡Project-Overview)
+3. [Technologies-Used](#🛠️Technologies-Used)
+4. [Personal-Comment](#Personal-Comment)
 5. [Walk Through Video](#🚶🏽‍♀️Walk-Through-Video)
 
 ### ✨Key Features
@@ -27,10 +27,10 @@ CSS3: Styling, responsive design, and theme mode implementation (light/dark).
 JavaScript (ES6): Form validation, DOM manipulation, modal animations, and dynamic RSVP list handling.
 Git & GitHub: Version control and project documentation.
 
-### Personal Comment 
+### Personal Comment
 This project was created for my cousin’s quinceañera. My goal was to design a webpage that captured the beauty and excitement of the celebration while remaining interactive, responsive, and easy to use. Beyond being a personal gift, it also served as a hands-on opportunity to strengthen my front-end development skills — blending event functionality, form validation, and user-centered design into one polished experience.
 
-### 🚶🏽‍♀️Walk Through Video 
+### 🚶🏽‍♀️Walk Through Video
 <div>
     <a href="https://www.loom.com/share/db22c74ce1be405f80a4b03406055be5">
     </a>
