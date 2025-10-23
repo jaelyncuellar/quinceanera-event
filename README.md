@@ -28,7 +28,7 @@ JavaScript (ES6): Form validation, DOM manipulation, modal animations, and dynam
 Git & GitHub: Version control and project documentation. <br>
 
 ### Personal Comment
-This project was created for my cousin’s quinceañera. My goal was to design a webpage that captured the beauty and excitement of the celebration while remaining interactive, responsive, and easy to use. Beyond being a personal gift, it also served as a hands-on opportunity to strengthen my front-end development skills — blending event functionality, form validation, and user-centered design into one polished experience.
+This project was created for my cousin’s quinceañera. My goal was to design a webpage that captured the beauty and excitement of the celebration while remaining interactive, responsive, and easy to use. Beyond being a personal gift, it also served as a hands-on opportunity to strengthen my front-end development skills - blending event functionality, form validation, and user-centered design into one polished experience.
 
 ### Walk Through Video
 <div>
