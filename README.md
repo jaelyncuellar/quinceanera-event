@@ -22,10 +22,10 @@ This project is a fully responsive, interactive event webpage created for a quin
 This webpage was developed as a modern and interactive event platform for a family celebration. The project integrates core front-end technologies and focuses on user engagement, accessibility, and responsive design principles. It demonstrates practical implementation of JavaScript form handling, DOM manipulation, and UI feedback through animations and theme toggling.
 
 ### Technologies Used
-HTML5: Structure and semantic layout of the webpage.
-CSS3: Styling, responsive design, and theme mode implementation (light/dark).
-JavaScript (ES6): Form validation, DOM manipulation, modal animations, and dynamic RSVP list handling.
-Git & GitHub: Version control and project documentation.
+HTML5: Structure and semantic layout of the webpage. <br>
+CSS3: Styling, responsive design, and theme mode implementation (light/dark).<br>
+JavaScript (ES6): Form validation, DOM manipulation, modal animations, and dynamic RSVP list handling. <br>
+Git & GitHub: Version control and project documentation. <br>
 
 ### Personal Comment
 This project was created for my cousin’s quinceañera. My goal was to design a webpage that captured the beauty and excitement of the celebration while remaining interactive, responsive, and easy to use. Beyond being a personal gift, it also served as a hands-on opportunity to strengthen my front-end development skills — blending event functionality, form validation, and user-centered design into one polished experience.
