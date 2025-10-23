@@ -33,10 +33,7 @@ const addParticipant = (event, person) => {
     increaseCount.id = 'rsvp-count'; 
     increaseCount.textContent="⭐" + count + " people have RSVP'd to this event!"; 
     participantsDiv.appendChild(increaseCount); 
-    // event.preventDefault();
 }
-// click event listener to the submit RSVP button
-rsvpButton.addEventListener("click", addParticipant);
 
 /*** Form Validation ***/
 const validateForm = (event) => { 
@@ -60,7 +57,8 @@ const validateForm = (event) => {
             element.classList.remove('error'); 
         }
     }
-    if (!person.email.includes(".com")){ 
+    const email=person.email.trim();
+    if (!email.includes(".com")){ 
         console.log("email not valid!"); 
         containsErrors=true;
         document.getElementById('email').classList.add('error');
@@ -68,11 +66,11 @@ const validateForm = (event) => {
     // if no errors - call addParticipant() and clear fields 
     if (!containsErrors){ // true 
         addParticipant(person);
+        toggleModal(person);
         for (let i = 0; i < rsvpElements.length; i++){ 
             rsvpElements[i].value = "";
         }
     }
-    toggleModal(person);
 }
 // replace the form button's event listener with a new one that calls validateForm() 
 rsvpButton.addEventListener("click", validateForm);
@@ -92,7 +90,7 @@ const toggleModal = (person) => {
     setTimeout(()=>{
         modal.style.display='none';
         clearInterval(intervalId); 
-    }, 5000); 
+    }, 3000); 
 
 }
 // TODO: animation variables and animateImage() function

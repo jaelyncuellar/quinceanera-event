@@ -15,14 +15,16 @@
                 <img alt="Navy Blue Quinceañera. 15th Birthday Celebration" src="https://easy-peasy.ai/cdn-cgi/image/quality=80,format=auto,width=700/https://media.easy-peasy.ai/27feb2bb-aeb4-4a83-9fb6-8f3f2a15885e/67ca9d86-ae5e-42ba-95df-8997547b5754.png"/> 
             </div> 
             <h1>Aaliyah's Quinceanera</h1>
-            <h4>Princess to Queen</h4>
+            <h3><i>Princess to Queen</i></h3>
             <div class="header-button">
                 <div class="header-item">
-                    <button type="button">RSVP</button>
+                    <button type="button" onclick="document.getElementById('rsvp').scrollIntoView({ behavior: 'smooth' })">
+                        RSVP!
+                    </button>
                 </div>
-                <div class="header-item">
-                    <button type="button">Sponsor</button>
-                </div>
+                <!-- <div class="header-item">
+                    <button type="button">...</button>
+                </div> -->
             </div>
         </div> 
         <link rel="icon" href="./img/aaliyah-crown.jpg">
@@ -32,7 +34,7 @@
     <!-- navbar-->
         <div class="navbar">
             <ul>
-            <li><a href="#about">About</a></li>
+            <li><a href="#welcome">About</a></li>
             <li><a href="#schedule">Schedule</a></li>
             <li><a href="#links">Information</a></li>
             <li><button id="theme-button">Theme Mode</button></li>
@@ -44,86 +46,84 @@
         - Section for general info about the event
         - Contains a video, description, and key points about the event
         --> 
-        <h2 id="Welcome">Welcome</h2>
-        <p>You're invited to celebrate a special milestone - Aaliyah’s Quinceañera, a tradition that honors her growth, heritage, and the journey into young womanhood.</p>
-        <p>A royal transformation from princess to queen. Surrounded by family, friends, and community, we’ll mark this meaningful day with music, food, and celebration. </p> 
-        <p>Join us as we honor Aaliyah’s roots and embrace the future with love, pride, and joy.</p>
-        <h4>Aaliyah's Padrinos y Madrinos</h4>
-        <ul>
-            <li> <b>Jose Ramon Zamarron - </b><i>Venue</i></li>
-            <li> <b>Malicha Cuellar - </b><i>Food</i></li>
-            <li> <b>Patricia Shishido - </b><i>Decorations</i></li>
-        </ul>
+        <section> 
+            <h2 id="welcome">Welcome</h2>
+            <p>You're invited to celebrate a special milestone - Aaliyah’s Quinceañera, a tradition that honors her growth, heritage, and the journey into young womanhood.</p>
+            <p>A royal transformation from princess to queen. Surrounded by family, friends, and community, we’ll mark this meaningful day with music, food, and celebration. </p> 
+            <p>Join us as we honor Aaliyah’s roots and embrace the future with love, pride, and joy.</p>
+            <h4><u>Aaliyah's Padrinos y Madrinos</u></h4>
+            <ul style="list-style: none; text-align: center; padding: 0;">
+                <li> <b>Jose Ramon Zamarron - </b><i>Venue</i></li>
+                <li> <b>Malicha Cuellar - </b><i>Food</i></li>
+                <li> <b>Patricia Shishido - </b><i>Decorations</i></li>
+            </ul>        
+        </section>
 
-        <!-- schedule --> 
         <h2 id="schedule">Event Schedule</h2>
-        <!-- arrive, formal pres, what is the order of events?   --> 
-        <h3>Dinner</h3>
-        <img alt="Image description" src="https://d1h2anuecgxlkn.cloudfront.net/networks/5/blog/t_320_320/eKIWiyRYjvKyrZuqvrGrpzM6hoseovFl26wFHz7j.webp"/>
-        <p>Enjoy delicious home cooked mexican foods and desserts.</p>
+        <section> 
+            <h3>Dinner</h3>
+            <img class='center-img' alt="Image description" src="https://d1h2anuecgxlkn.cloudfront.net/networks/5/blog/t_320_320/eKIWiyRYjvKyrZuqvrGrpzM6hoseovFl26wFHz7j.webp"/>
+            <p>Enjoy delicious home cooked mexican foods and desserts!</p>
+        </section>
+        <section> 
+            <h3>Formal Presentation</h3>
+            <img class='center-img'alt="Diamond Crown. Quinceanera." height="60%" width="60%" src="./img/aaliyah-crown.jpg"/> 
+            <p>The Quinceanera will be recognized and introduced to the party guests.</p>
+        </section>
+        <section> 
+            <h3>Traditional Dances</h3>
+            <img class='center-img'width="225" height="315" src="./img/dance.png" alt="Quince dancing with her father." width="200">
+            <p>The Quinceañera will engage in dances with her Damas and Chambelanes.</p>
+            <p>The Quinceañera will also do El Baile con Papá.</p>
+        </section> 
 
-        <h3>Formal Presentation</h3>
-        <img alt="Diamond Crown. Quinceanera." height="60%" width="60%" src="./img/aaliyah-crown.jpg"/> 
-        <p>The Quinceanera will be recognized and introduced to the party guests.</p>
-        
-        <h3>Traditional Dances</h3>
-        <img width="225" height="315" alt="Image description" src="https://sdmntpritalynorth.oaiusercontent.com/files/00000000-0a30-6246-a75b-68f18493b3b2/raw?se=2025-09-04T23%3A26%3A15Z&sp=r&sv=2024-08-04&sr=b&scid=1afeb7e5-85d5-5159-b4c7-b1ee3f81c9ae&skoid=0da8417a-a4c3-4a19-9b05-b82cee9d8868&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-09-04T15%3A40%3A20Z&ske=2025-09-05T15%3A40%3A20Z&sks=b&skv=2024-08-04&sig=c8nEIo86XpLcaILJSfLEIB8iAD%2BQm8HedQSKocT7byU%3D"/>
-        <p>The Quinceañera will engage in dances with her Damas and Chambelanes.</p>
-        <p>The Quinceañera will do El Baile con Papá.</p>
-            
-        <!-- rsvp
-        - users sign up for the event, contains form for users to input info, 
-        & a list of other users who have signed up
-        --> 
-        <div id="rsvp">
-            <h2>RSVP</h2>
-            <p id="rsvp-count">"⭐ 3 people have RSVP'd to this event!"</p>
-            <div class="rsvp-container">
-                <div class="rsvp-para">
-                    <!-- info goes here -->
-                    We cannot wait to celebrate this unforgettable night with you.
-                    Please RSVP by <u>January 1st, 2025</u> to reserve your place at the celebration!
+        <section> 
+            <div id="rsvp">
+                <h2>RSVP</h2>
+                <p id="rsvp-count">⭐ 3 people have RSVP'd to this event!</p>
+                <div class="rsvp-container">
+                    <div class="rsvp-para">
+                        <!-- info goes here -->
+                        We are excited to celebrate this unforgettable night with you.
+                        Please RSVP by <u>January 1st, 2025</u> to reserve your place at the celebration!
+                    </div>
+                    <div class="rsvp-participants">
+                        <p>🎟️ Melissa has RSVP'd.</p>
+                        <p>🎟️ Allie has RSVP'd.</p>
+                        <p>🎟️ Antonia has RSVP'd.</p>
+                    </div>
                 </div>
-                <div class="rsvp-participants">
-                    <p>🎟️ Melissa has RSVP'd.</p>
-                    <p>🎟️ Allie has RSVP'd.</p>
-                    <p>🎟️ Antonia has RSVP'd.</p>
+                <div class="form-container">
+                    <form id="rsvp-form" title="rsvp-form">
+                        <label for="fname">First name</label><br> 
+                        <input type="text" id="fname" placeholder="First Name" required><br>
+                        <label for="lname">Last name</label><br> 
+                        <input type="text" id="lname" placeholder="Last Name" required><br>
+                        <label for="email">Email</label><br> 
+                        <input type="text" id="email" placeholder="Email" required><br>
+                    </form>
+                    <button id="rsvp-button">Submit RSVP</button>
+                </div>      
+            </div>
+        </section>
+
+        <div id="success-modal" class="modal">
+            <div class="modal-container">
+                <div id="modal-item">
+                    <p>Modal Pop-up Placeholder</p>
+                </div>
+                <div id="modal-item">
+                    <img id='modal-image' src="./img/rsvp-crown.png" alt="RSVP Crown" width="200">
                 </div>
             </div>
-            <div class="form-container">
-                <form id="rsvp-form" title="rsvp-form">
-                    <label for="fname">First name</label><br> 
-                    <input type="text" id="fname" placeholder="First Name" required><br>
-                    <label for="lname">Last name</label><br> 
-                    <input type="text" id="lname" placeholder="Last Name" required><br>
-                    <label for="email">Email</label><br> 
-                    <input type="text" id="email" placeholder="Email" required><br>
-                </form>
-                <button id="rsvp-button">Submit RSVP</button>
-            </div>      
         </div>
-         
-<!-- success modal
-- Modal that appears when a user successfully signs up for the event
-- Contains a personalized message and image
---> 
-<div id="success-modal" class="modal">
-    <div class="modal-container">
-        <div id="modal-item">
-            <p>Modal Pop-up Placeholder</p>
-        </div>
-        <div id="modal-item">
-            <img id='modal-image' src="./img/rsvp-crown.png" alt="RSVP Crown" width="200">
-        </div>
-    </div>
-</div>
 
         <!-- links --> 
-        <h2 id="links">Links</h2>
+        <h2 id="links">Learn more</h2>
         <!-- This <a> block is one link -->
         <a class = "block">
             <article>
-                <h4>What is a Quinceañera?</h4>
+                <h4><u>What is a Quinceañera?</u></h4>
                 <div class="video-container">
                     <iframe src="https://www.youtube.com/embed/_0LXMJYP76M?si=0hdcGnxGKtb1f_VW" title="What is a Quinceañera?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
@@ -131,19 +131,19 @@
         </a>
         <a class="block" href="https://www.villarussocatering.com/blog/quinceaneras-expect-wear">
             <article>
-                <h4>Dress Code</h4>
+                <h4><u>Dress Code</u></h4>
                 <p>What to wear to a Quinceanera?</p>
             </article>
         </a>
         <a class="block" href="https://qbydavinci.com/blog/quinceanera-primer-for-non-latino-friends/">
             <article>
-                <h4>Quinceanera 101</h4>
+                <h4><u>Quinceanera 101</u></h4>
                 <p>Non-Latino? No worries! All are welcome.</p>
             </article>
         </a>
         <a class="block" href="https://www.arianavara.com/blog/navigating-quincea-era-etiquette-dos-and-don-ts-for-guests-and-the-honoree">
             <article>
-                <h4>Do's & Dont's</h4>
+                <h4><u>Do's & Dont's</u></h4>
                 <p>Curious about what to expect?</p>
             </article>
         </a>
